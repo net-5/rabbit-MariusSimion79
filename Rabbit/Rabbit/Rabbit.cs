@@ -7,38 +7,8 @@ namespace Rabbit
     class Rabbit
     {
 
-        private string eyes;
-        private string fur;
-        public string Eyes
-        {
-            get { return eyes; }
-            set
-            {
-                if (value == "blue" || value == "red")
-                {
-                    eyes = value;
-                }
-                else
-                {
-                    eyes = "black";
-                }
-            }
-        }
-        public string Fur
-        {
-            get { return fur; }
-            set
-            {
-                if (value == "white" || value == "brown" || value == "black")
-                {
-                    fur = value;
-                }
-                else
-                {
-                    fur = "grey";
-                }
-            }
-        }
+        public string Eyes { get; set; }
+        public string Fur { get; set; }
         public string Gender { get; set; }
         public int BirthDate { get; set; }
 
