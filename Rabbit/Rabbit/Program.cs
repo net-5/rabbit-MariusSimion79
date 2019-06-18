@@ -16,13 +16,13 @@ namespace Rabbit
             Console.Write("Please enter the rabbit birthdate: ");
             rabbit1.BirthDate = int.Parse(Console.ReadLine());
             Console.WriteLine("************************************************************************************");
-            Console.WriteLine( rabbit1.ShowInfo() );
-            Console.WriteLine( rabbit1.DisplayAge() );
-            Console.WriteLine( rabbit1.Move() );
-            Console.WriteLine( rabbit1.Sleep() );
-            Console.WriteLine( rabbit1.Eat() ); 
+            Console.WriteLine(rabbit1.ShowInfo());
+            Console.WriteLine(rabbit1.DisplayAge());
+            Console.WriteLine(rabbit1.Move());
+            Console.WriteLine(rabbit1.Sleep());
+            Console.WriteLine(rabbit1.Eat());
             Console.WriteLine("************************************************************************************");
-            
+
         }
     }
 }
