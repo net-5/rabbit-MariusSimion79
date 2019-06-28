@@ -6,23 +6,23 @@ namespace RabbitHomework
 {
     public enum EyesColour
     {
-        blue,
-        red,
-        black
+        Blue,
+        Red,
+        Black
     }
 
     public enum FurColour
     {
-        white,
-        brown,
-        black,
-        grey
+        White,
+        Brown,
+        Black,
+        Grey
     }
 
     public enum Gender
     {
-        male,
-        female
+        Male,
+        Female
     }
 
     public class Rabbit
@@ -41,37 +41,53 @@ namespace RabbitHomework
         public FurColour Fur
         {
             get { return this.fur; }
-            set { this.fur = value; }
+           // set { this.fur = value; }
         }
         public Gender Gender
         {
             get { return this.gender; }
-            set { this.gender = value; }
+            //set { this.gender = value; }
         }
-        private int birthYear;
+        private DateTime birthDay;
 
-        public int BirthYear
+        public DateTime BirthDay
         {
-            get { return this.birthYear; }
-            set { this.birthYear = value; }
+            get { return this.birthDay; }
+            set { this.birthDay = value; }
         }
 
-        public Rabbit(EyesColour eyes, FurColour fur, Gender gender, int birthYear)
+        public Rabbit(EyesColour eyes, FurColour fur, Gender gender, DateTime birthDay)
         {
             this.Eyes = eyes;
-            this.Fur = fur;
-            this.Gender = gender;
-            this.BirthYear = birthYear;
+            //this.Fur = fur;
+            //this.Gender = gender;
+            this.BirthDay = birthDay;
         }
 
-        public int Age()
+       
+        
+
+        public int Age
         {
-            return 2019 - birthYear;
+            get
+            {
+                DateTime currentDate = DateTime.Today;
+                int age = currentDate.Year - BirthDay.Year;
+
+                if (currentDate.Month < BirthDay.Month || (currentDate.Month == BirthDay.Month && currentDate.Day < BirthDay.Day))
+                {
+                    age--;
+                }
+                return age;
+            }
         }
+
+
+
 
         public string RabbitInfo()
         {
-            return $"I`m an {Age()} years old {gender} rabbit, I have {Eyes} eyes and {Fur} fur.";
+            return $"I`m an {Age} years old {gender} rabbit, I have {Eyes} eyes and {Fur} fur.";
         }
 
         public string Move()

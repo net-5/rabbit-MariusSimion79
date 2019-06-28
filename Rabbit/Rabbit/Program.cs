@@ -6,7 +6,7 @@ namespace RabbitHomework
     {
         static void Main(string[] args)
         {
-            Rabbit rabbit1 = new Rabbit(EyesColour.blue, FurColour.white, Gender.male, 2016);
+            Rabbit rabbit1 = new Rabbit(EyesColour.Blue, FurColour.White, Gender.Male, new DateTime(2013, 7, 23));
 
 
             Console.WriteLine("************************************************************************************");
@@ -16,11 +16,9 @@ namespace RabbitHomework
             Console.WriteLine(rabbit1.Eat());
             Console.WriteLine("************************************************************************************");
 
-
-
-
-
-
+            //rabbit1.Age = 3;
+            //rabbit1.Fur = FurColour.Black;      // consider ca nu se vopseste :)
+            //rabbit1.Gender = Gender.Female;       // nici aici nu se schimba nimic
 
 
         }
